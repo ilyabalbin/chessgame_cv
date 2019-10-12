@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, Response
-from camera_opencv import Camera
+from camera_chess import Camera
 
 app = Flask(__name__)
 
@@ -19,7 +19,7 @@ def gen(camera):
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gen(Camera()),
+    return Response(gen(Camera("http://100.66.103.27:8080/video")),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
