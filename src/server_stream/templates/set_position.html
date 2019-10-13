@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+    <img  src="{{ url_for('video_feed') }}" class="img-thumbnail" alt="board" width="400",  height="400">
+    <h1>Set piece on board</h1>
+    <a href="{{ url_for('chess_game') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Got it!</a>
+{% endblock %}

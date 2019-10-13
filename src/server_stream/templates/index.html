@@ -1,9 +1,9 @@
-<html>
-  <head>
-    <title>Video Streaming Demonstration</title>
-  </head>
-  <body>
-    <h1>Video Streaming Demonstration</h1>
-    <img src="{{ url_for('video_feed') }}" width="800" height="800">
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="POST" class="form-group">
+        <label for="video_source">'Write url for IP camera</label>
+        <input class="form-control" type="text" name="video_source" id="video_source" placeholder="Default input">
+        <button type="submit" class="btn btn-success">Done</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <img  src="{{ url_for('video_feed') }}" class="img-thumbnail" alt="board" width="400",  height="400">
+    <form method="POST">
+        <div class="form-check form-check-inline">
+            <div class="form-check">
+                <input class="form-check-input"  type="checkbox" value="" id="defaultCheck1" onchange="document.getElementById('success').disabled = !this.checked;">
+                <label class="form-check-label" for="defaultCheck1">
+                    Clear board on the  Camera.
+                </label>
+                <button type="submit" disabled  class="btn btn-success" id="success">Success</button>
+            </div>
+    </form>
+{% endblock %}
