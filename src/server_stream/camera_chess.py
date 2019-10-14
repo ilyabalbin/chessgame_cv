@@ -218,7 +218,7 @@ class Camera(BaseCamera):
             hand_on_change = hand_on_cur ^ hand_on_last
             hand_on_last = hand_on_cur
 
-            print("hand on" if hand_on_cur else "hand off")
+            # print("hand on" if hand_on_cur else "hand off")
 
             if hand_on_change and not hand_on_cur:
                 print('yo')
